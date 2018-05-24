@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="styles/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/jquery-migrate-3.0.0.min.js"></script>
+    <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+    <script src="scripts/mycinema.js"></script> 
+    <title>MY Cinema</title> 
+</head> 
+<body>
+    <!-- Movies Choices -->
+    <div data-role="page" id="home">
+        <div data-role="header" class="ui-btn ui-btn-b" data-position="fixed">
+            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext"></a>
+            <h1>iMovie</h1>
+            <a href="#LoginPage" data-role="button"  data-iconpos="left">Login</a>
+        </div>
+
+        <div data-role="content">
+            <center  class="ui-btn ui-btn-b">
+                <img src="frojector.jpg" style="max-width:30%;max-height:15%;">
+                <h2>WELCOME TO OUR CINEMA.</h2>
+                <form class="ui-filterable">
+                    <input id="filterBasic-input" data-type="search">
+                </form>
+            </center>
+            <br>
+            <div data-role="listview"  class="ui-btn ui-btn-b" data-filter="true" data-input="#filterBasic-input">
+                <div data-role="collapsible"  data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
+                    <h1>
+                        <img src="matrix.png" style="max-width:10%;max-height:10%;" /><span  style="vertical-align: 17px;"> The Matirx</span>
+                    </h1>
+                    <a>Synopsis:</a><br />
+                    It depicts a dystopian future in which reality as perceived by most humans is actually a simulated reality called "the Matrix", created by sentient machines to subdue the human population, while their bodies' heat and electrical activity are used as an energy source. Computer programmer Neo learns this truth and is drawn into a rebellion against the machines, which involves other people who have been freed from the "dream world."<br />
+                    <a>Starring:</a><br />Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving.<br />
+                    <a>Run Time:</a><br />136 minutes.
+                    <button id="theMatrix" class="ui-btn ui-btn-b" style="width:20%; margin: auto;" onclick="wireEvents()">buy</button>
+                </div>
+                <div data-role="collapsible" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
+                    <h1>
+                        <img src="shawshank.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> The Shawshank Redemption</span>
+                    </h1>
+                    <a>Synopsis:</a><br />
+                    It tells the story of banker Andy Dufresne , who is sentenced to life in Shawshank State Penitentiary for the murder of his wife and her lover, despite his claims of innocence. Over the following two decades, he befriends a fellow prisoner, contraband smuggler Ellis "Red" Redding , and becomes instrumental in a money laundering operation led by the prison warden Samuel Norton
+                    <br />
+                    <a>Starring:</a><br />Tim Robbins, Morgan Freeman, Bob Gunton.<br />
+                    <a>Run Time:</a><br />142 minutes.
+                    <button id="shawshankRed" class="ui-btn ui-btn-b" style="width:20%; margin: auto;" onclick="wireEvents()">buy</button>
+                </div>
+                <div data-role="collapsible" class="btn" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
+                    <h1>
+                        <img src="fightclub.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> Fight Club</span>
+                    </h1>
+                    <a>Synopsis:</a><br />
+                    Norton plays the unnamed protagonist, referred to as the narrator, who is discontented with his white-collar job. He forms a "fight club" with soap maker Tyler Durden, played by Pitt, and they are joined by men who also want to fight recreationally. The narrator becomes embroiled in a relationship with Durden and a dissolute woman, Marla Singer, played by Bonham Carter.
+                    <br />
+                    <a>Starring:</a><br />Brad Pitt, Edward Norton,Helena Bonham Carter.<br />
+                    <a>Run Time:</a><br />139 minutes.
+                    <button id="fightClub" class="ui-btn ui-btn-b" style="width:20%; margin: auto;" onclick="wireEvents()">buy</button>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" class="ui-btn ui-btn-b" >
+            <h4>&copy; iMovie</h4>
+        </div>
+    </div>
+
+    <!--the login page-->
+    <div data-role="page" id="LoginPage" data-theme="a">
+        <div data-role="header"  class="ui-btn ui-btn-b">
+            <h5>Welcome</h5>
+        </div>
+        <div data-role="content">
+            <br /><br />
+            <fieldset data-role="fieldcontain" style="border: 1px solid black; padding: 5px;">
+                <legend>Please Login</legend>
+                <label for="LPName">Name:</label>
+                <input type="text" id="LPName" name="text" placeholder="insert your name..." />
+                <label for="LPPassword">Password:</label>
+                <input type="text" id="LPPassword" name="number" placeholder="insert your password..." />
+                <div style="text-align:center">
+                    <a href="#" data-role="button" id="LoginBtn" class="ui-btn ui-btn-b" data-mini="true" data-inline="true" data-icon="check" data-iconpos="bottom">Login</a>
+                </div>
+            </fieldset>
+        </div>
+        <div data-role="footer"  data-theme="d" class="ui-btn ui-btn-b">
+            <h5>&copy; iMovie</h5>
+        </div>
+    </div>
+
+
+    <!-- Tickets Purchase -->
+    <div data-role="page" id="buy">
+        <div data-role="header" data-position="fixed" class="ui-btn ui-btn-b">
+            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext"></a>
+            <h1>iMovie</h1>
+            <a href="#" data-role="button" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        </div>
+
+        <div data-role="content" onchange="pic()" style="text-align:center">
+            <h2 id="movie" style="text-align:center"></h2>
+            <div id="pichere" >
+                <img id="poster" src="matrix.png" width="45%" height="40%">
+            </div>
+            <div id="stamSP"></div>
+        </div>
+        <div>
+            <center  class="ui-btn ui-btn-b">
+                <center>
+                <b style="text-align:center"> Choose Cinema:</b>
+                <div data-role="fieldcontain" style="height:70%; width:70%;">
+                    <select>
+                        <option value="Cinema city">Cinema City</option>
+                        <option value="Yes Planet">Yes Planet</option>
+                        <option value="Lev Cinema">Lev Cinema</option>
+                        <option value="Globus Max">Globus Max</option>
+                    </select>
+                </div>
+                    </center>
+            </center>
+        </div>
+
+
+        <div data-role="footer"  class="ui-btn ui-btn-b" style="border-style:solid">
+            <div> Tickets:</div>
+            <input type="number" id="numOftic" placeholder="insert number of tickets" value="Number of Tickets">
+            <div>
+                <center>
+                    <b style="text-align:center"> Choose Ticket Type:</b>
+                    <div data-role="fieldcontain"  style="height:70%; width:70%;">
+                        <select>
+                            <option value="Cinema city">Normal</option>
+                            <option value="Yes Planet">LateNight</option>
+                            <option value="Lev Cinema">VIP</option>
+                        </select>
+                    </div>
+                </center>
+            </div>
+            <div>Date:</div><input type="date" id="date">
+            <div>Hour:</div><input type="time" id="hour">
+            <form>
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <input type="checkbox" name="pop" id="pop">
+                    <label for="pop" class="ui-btn ui-btn-b">Popcorn</label>
+                    <input type="checkbox" name="cola" id="cola">
+                    <label for="cola" class="ui-btn ui-btn-b">Coca-Cola</label>
+                    <input type="checkbox" name="snacks" id="snacks">
+                    <label for="snacks" class="ui-btn ui-btn-b">Snickers</label>
+                </fieldset>
+            </form>
+            <center> <a href="#Seats" class="ui-btn ui-btn-b" data-role="button" data-rel="next">Next</a></center>
+
+
+        </div>
+
+        <div data-role="footer"   class="ui-btn ui-btn-b" data-position="fixed">
+            <h4>&copy; iMovie</h4>
+        </div>
+
+    </div>
+    <!--Choose Seats-->
+    <div data-role="page" id="Seats">
+        <div data-role="header"  class="ui-btn ui-btn-b">
+            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext"></a>
+            <h5>Please choose seats:</h5>
+            <a href="#" data-role="button" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+
+        </div>
+        <center>
+            <img src="cinema-chair.jpg" width="100%" height="10%" />
+        </center>
+        <center  class="ui-btn ui-btn-b">
+            <div data-role="content">
+                <div data-role="main" class="ui-content">
+                    <table data-role="table" class="ui-responsive ui-shadow" id="myTable">
+                        <thead>
+                            <tr>
+                                <th data-priority="6">Row</th>
+                                <th>1</th>
+                                <th data-priority="1"> 2</th>
+                                <th data-priority="2">3</th>
+                                <th data-priority="3">4</th>
+                                <th data-priority="4">5</th>
+                                <th data-priority="5">6</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 1 seat 1"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 1 seat 2"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 1 seat 3"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 1 seat 4"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 1 seat 5"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 1 seat 6"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 2 seat 1"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 2 seat 2"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 2 seat 3"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 2 seat 4"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 2 seat 5"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 2 seat 6"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 3 seat 1"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 3 seat 2"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 3 seat 3"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 3 seat 4"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 3 seat 5"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 3 seat 6"></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 4 seat 1"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 4 seat 2"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 4 seat 3"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 4 seat 4"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 4 seat 5"></td>
+                                <td><input type="checkbox" id="seat" name=ch[] value="Row 4 seat 6"></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <center  class="ui-btn ui-btn-b"> <a href="#order" class="ui-btn ui-btn-b" data-role="button" data-rel="next">Next</a></center>
+            </div>
+        </center>
+        <div data-role="footer"  class="ui-btn ui-btn-b">
+            <h5>&copy; iMovie</h5>
+        </div>
+    </div>
+
+
+    <!--page 3-->
+    <div data-role="page" id="order">
+        <div data-role="header"  class="ui-btn ui-btn-b">
+            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext"></a>
+            <h1>Cinema</h1>
+            <a href="#" data-role="button" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+        </div>
+        <div>
+            <h3 style="text-align:center" class="ui-btn ui-btn-b">
+                You chose the movie:
+                <br>
+                <i id="movNam"></i><br />
+                you choose cinema:
+                <br>
+                Number of tickets:
+                <i id="num"></i><br />
+                Date and time:
+                <i id="dDate"></i><br />
+                You order extra:
+                <i id="ex"></i><br />
+                Total Pay:
+                <i id="price"></i>
+            </h3>
+        </div>
+        <center  class="ui-btn ui-btn-b">
+            <center>
+            <div>
+                <b style="text-align:center"> Select Card Type:</b>
+                <div data-role="fieldcontain" style="height:70%; width:70%;">
+                    <select>
+                        <option value="Leumi Card">Leumi Card</option>
+                        <option value="American Express">American Express</option>
+                        <option value="Master Card">Master Card</option>
+                    </select>
+                </div>
+                <b style="text-align:center"> Credit Card Number:</b>
+                <input id="numOftic" type="number" placeholder="insert Credit Card Number" value="Credit Card Number">
+                <b style="text-align:center"> Credit Card validity:</b>
+                <input id="validityOftic" type="number" placeholder="insert Credit Card validity" value="Credit Card validity">
+                <div>
+                    <center  class="ui-btn ui-btn-b">
+                        <b style="text-align:center">Type Of Citizen:</b>
+                        <div data-role="fieldcontain" style="height:70%; width:70%;">
+                            <select>
+                                <option value="Cinema city">אזרח רגיל </option>
+                                <option value="Yes Planet">אזרח וותיק</option>
+                                <option value="Lev Cinema">חייל</option>
+                                <option value="Lev Cinema">נכה</option>
+                            </select>
+                        </div>
+                    </center>
+                </div>
+                <b style="text-align:center"> id:</b>
+                <input id="id" type="number" placeholder="insert your id" value="id">
+                <b style="text-align:center"> Coupon?</b>
+                <fieldset data-role="fieldcontain">
+                    <select data-role="slider">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </fieldset>
+                <a href="#dia" data-role="button" class="ui-btn ui-btn-b" data-rel="dialog">Save Order</a>
+            </div>
+                </center>
+        </center>
+        <div data-role="footer"   class="ui-btn ui-btn-b" data-position="fixed">
+            <h4>&copy; iMovie</h4>
+        </div>
+    </div>
+
+    <div id=dia data-role="dialog" >
+        <center  class="ui-btn ui-btn-b">
+            <div data-role="header" class="ui-btn ui-btn-b"><h1>Cinema</h1></div>
+            Your Order Is Completed!
+            <div data-role="footer" class="ui-btn ui-btn-b">
+                <h4>&copy; iMovie</h4>
+            </div>
+        </center>
+    </div>
+</body>
+</html>
