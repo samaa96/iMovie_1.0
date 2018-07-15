@@ -1,25 +1,33 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+
     <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="styles/MyStSh.css" rel="stylesheet" type="text/css" />
     <link href="styles/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
     <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
     <script src="scripts/jquery-migrate-3.0.0.min.js"></script>
     <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
-    <script src="scripts/mycinema.js"></script> 
-    <title>MY Cinema</title> 
-</head> 
-<body>
-    <!-- Movies Choices -->
-    <div data-role="page" id="home">
-        <div data-role="header" class="ui-btn ui-btn-b" data-position="fixed">
-            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext"></a>
-            <h1>iMovie</h1>
-            <a href="#LoginPage" data-role="button"  data-iconpos="left">Login</a>
-        </div>
+    <script src="scripts/mycinema.js"></script>
+    <title>MY Cinema</title>
+    <!--<script type="text/javascript">
+        $(document).on('mobileinit', function () {
+            $.mobile.defaultPageTransition = "slide";
+        });
+    </script>-->
 
+</head>
+<body>
+    <!-- Movies Choices- General - no login -->
+    <div data-role="page" class="ui-btn-right" id="homeGeneral">
+        <div data-role="header" class="ui-btn ui-btn-b">
+            <a href="#homeGeneral" id="Homebtn" data-role="button" class="ui-btn-left" data-icon="home" data-iconpos="notext"></a>
+            <h1>iMovie</h1>
+            <a href="#LoginPage" data-role="button">Login</a>
+        </div>
         <div data-role="content">
-            <center  class="ui-btn ui-btn-b">
+            <center class="ui-btn ui-btn-b">
                 <img src="frojector.jpg" style="max-width:30%;max-height:15%;">
                 <h2>WELCOME TO OUR CINEMA.</h2>
                 <form class="ui-filterable">
@@ -27,88 +35,601 @@
                 </form>
             </center>
             <br>
-            <div data-role="listview"  class="ui-btn ui-btn-b" data-filter="true" data-input="#filterBasic-input">
-                <div data-role="collapsible"  data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
+            <div data-role="listview" class="ui-btn ui-btn-b" data-filter="true" data-input="#filterBasic-input">
+                <div data-role="collapsible" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
                     <h1>
-                        <img src="matrix.png" style="max-width:10%;max-height:10%;" /><span  style="vertical-align: 17px;"> The Matirx</span>
+                        <img src="i_feel_pretty.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> i feel pretty</span>
                     </h1>
                     <a>Synopsis:</a><br />
-                    It depicts a dystopian future in which reality as perceived by most humans is actually a simulated reality called "the Matrix", created by sentient machines to subdue the human population, while their bodies' heat and electrical activity are used as an energy source. Computer programmer Neo learns this truth and is drawn into a rebellion against the machines, which involves other people who have been freed from the "dream world."<br />
-                    <a>Starring:</a><br />Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving.<br />
-                    <a>Run Time:</a><br />136 minutes.
-                    <button id="theMatrix" class="ui-btn ui-btn-b" style="width:20%; margin: auto;" onclick="wireEvents()">buy</button>
+                    A woman struggling with insecurity wakes from a fall believing she is the most beautiful and capable woman on the planet.<br /> Her new confidence empowers her to live fearlessly,<br /> but what happens when she realizes her appearance never changed?<br />
+                    <a>Directors:</a><br /> Abby Kohn, Marc Silverstein<br />
+                    <a>Writers:</a><br />Abby Kohn, Marc Silverstein<br />
+                    <a>stars:</a><br />Amy Schumer, Michelle Williams, Emily Ratajkowski .<br />
+                    <a>Run Time:</a><br />110 minutes.
+
+                    <br />
+                    <br />
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/cVx9EFK3DWE"></iframe>
+                    <button id="i_feel_pretty" class="ui-btn ui-btn-b" style="width:20%; margin: auto;" onclick="wireEvents()">buy</button>
                 </div>
                 <div data-role="collapsible" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
                     <h1>
-                        <img src="shawshank.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> The Shawshank Redemption</span>
+                        <img src="jurassic_world.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> jurassic world </span>
                     </h1>
                     <a>Synopsis:</a><br />
-                    It tells the story of banker Andy Dufresne , who is sentenced to life in Shawshank State Penitentiary for the murder of his wife and her lover, despite his claims of innocence. Over the following two decades, he befriends a fellow prisoner, contraband smuggler Ellis "Red" Redding , and becomes instrumental in a money laundering operation led by the prison warden Samuel Norton
+                    When the island's dormant volcano begins roaring to life,<br /> Owen and Claire mount a campaign to rescue the remaining dinosaurs from this extinction-level event.<br />
                     <br />
-                    <a>Starring:</a><br />Tim Robbins, Morgan Freeman, Bob Gunton.<br />
-                    <a>Run Time:</a><br />142 minutes.
-                    <button id="shawshankRed" class="ui-btn ui-btn-b" style="width:20%; margin: auto;" onclick="wireEvents()">buy</button>
+                    <a>Directors:</a><br /> J.A. Bayona<br />
+                    <a>Writers:</a><br /> Colin Trevorrow, Derek Connolly<br />
+                    <a>stars:</a><br />Bryce Dallas Howard, Chris Pratt, Jeff Goldblum.<br />
+                    <a>Run Time:</a><br />127 minutes.
+                    <br />
+                    <br />
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/vn9mMeWcgoM"></iframe>
+                    <button id="jurassic_world" class="ui-btn ui-btn-b" style="width:20%; margin: auto;" onclick="wireEvents()">buy</button>
                 </div>
                 <div data-role="collapsible" class="btn" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
                     <h1>
-                        <img src="fightclub.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> Fight Club</span>
+                        <img src="truth_or_dare.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> truth or dare</span>
                     </h1>
                     <a>Synopsis:</a><br />
-                    Norton plays the unnamed protagonist, referred to as the narrator, who is discontented with his white-collar job. He forms a "fight club" with soap maker Tyler Durden, played by Pitt, and they are joined by men who also want to fight recreationally. The narrator becomes embroiled in a relationship with Durden and a dissolute woman, Marla Singer, played by Bonham Carter.
+                    A harmless game of Truth or Dare among friends turns deadly when someone <br />-- or something -- begins to punish those who tell a lie or refuse the dare.<br />
                     <br />
-                    <a>Starring:</a><br />Brad Pitt, Edward Norton,Helena Bonham Carter.<br />
-                    <a>Run Time:</a><br />139 minutes.
-                    <button id="fightClub" class="ui-btn ui-btn-b" style="width:20%; margin: auto;" onclick="wireEvents()">buy</button>
+                    <a>Directors:</a><br /> Jeff Wadlow<br />
+                    <a>Writers:</a><br />  Michael Reisz (story by), Michael Reisz (screenplay by)<br />
+                    <a>stars:</a><br />Lucy Hale, Tyler Posey, Violett Beane.<br />
+                    <a>Run Time:</a><br />103 minutes.
+                    <br />
+                    <br />
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/Cgnk3MLw9TM"></iframe>
+                    <button id="truth_or_dare" class="ui-btn ui-btn-b" style="width:20%; margin: auto;" onclick="wireEvents()">buy</button>
                 </div>
             </div>
         </div>
-        <div data-role="footer" class="ui-btn ui-btn-b" >
+        <div data-role="footer" class="ui-btn ui-btn-b">
             <h4>&copy; iMovie</h4>
         </div>
     </div>
-
-    <!--the login page-->
-    <div data-role="page" id="LoginPage" data-theme="a">
-        <div data-role="header"  class="ui-btn ui-btn-b">
-            <h5>Welcome</h5>
+    <!-- Movies Choices- Client -->
+    <div data-role="page" class="ui-btn-right" id="home">
+        <div data-role="header" class="ui-btn ui-btn-b">
+            <a href="#homeManager" id="Homebtn" data-role="button" class="ui-btn-left" data-icon="home" data-iconpos="notext"></a>
+            <h1>iMovie</h1>
+            <ul id="menu-right" data-role="menu">
+                <li>
+                    <span data-role="button" data-icon="arrow-d" data-iconpos="right">Actions</span>
+                    <ul data-role="listview" data-inset="true">
+                        <li data-icon="false">Delete</li>
+                        <li data-icon="false">Add</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
         <div data-role="content">
-            <br /><br />
-            <fieldset data-role="fieldcontain" style="border: 1px solid black; padding: 5px;">
-                <legend>Please Login</legend>
-                <label for="LPName">Name:</label>
-                <input type="text" id="LPName" name="text" placeholder="insert your name..." />
-                <label for="LPPassword">Password:</label>
-                <input type="text" id="LPPassword" name="number" placeholder="insert your password..." />
-                <div style="text-align:center">
-                    <a href="#" data-role="button" id="LoginBtn" class="ui-btn ui-btn-b" data-mini="true" data-inline="true" data-icon="check" data-iconpos="bottom">Login</a>
+
+            <center class="ui-btn ui-btn-b">
+
+                <img src="frojector.jpg" style="max-width:30%;max-height:15%;">
+
+                <h2>WELCOME TO OUR CINEMA.</h2>
+
+                <form class="ui-filterable">
+
+                    <input id="filterBasic-input" data-type="search">
+
+                </form>
+
+            </center>
+
+            <br>
+
+            <div data-role="listview" class="ui-btn ui-btn-b" data-filter="true" data-input="#filterBasic-input">
+                <div data-role="collapsible" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
+                    <h1>
+                        <img src="i_feel_pretty.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> i feel pretty</span>
+                    </h1>
+                    <a>Synopsis:</a><br />
+                    A woman struggling with insecurity wakes from a fall believing she is the most beautiful and capable woman on the planet.<br /> Her new confidence empowers her to live fearlessly,<br /> but what happens when she realizes her appearance never changed?<br />
+                    <a>Directors:</a><br /> Abby Kohn, Marc Silverstein<br />
+                    <a>Writers:</a><br />Abby Kohn, Marc Silverstein<br />
+                    <a>stars:</a><br />Amy Schumer, Michelle Williams, Emily Ratajkowski .<br />
+                    <a>Run Time:</a><br />110 minutes.
+
+                    <br />
+                    <br />
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/cVx9EFK3DWE"></iframe>
+                    <button id="i_feel_pretty" class="ui-btn ui-btn-b" style="width:20%; margin: auto;" onclick="wireEvents()">buy</button>
                 </div>
-            </fieldset>
+                <div data-role="collapsible" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
+                    <h1>
+                        <img src="jurassic_world.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> jurassic world </span>
+                    </h1>
+                    <a>Synopsis:</a><br />
+                    When the island's dormant volcano begins roaring to life,<br /> Owen and Claire mount a campaign to rescue the remaining dinosaurs from this extinction-level event.<br />
+                    <br />
+                    <a>Directors:</a><br /> J.A. Bayona<br />
+                    <a>Writers:</a><br /> Colin Trevorrow, Derek Connolly<br />
+                    <a>stars:</a><br />Bryce Dallas Howard, Chris Pratt, Jeff Goldblum.<br />
+                    <a>Run Time:</a><br />127 minutes.
+                    <br />
+                    <br />
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/vn9mMeWcgoM"></iframe>
+                    <button id="jurassic_world" class="ui-btn ui-btn-b" style="width:20%; margin: auto;" onclick="wireEvents()">buy</button>
+                </div>
+                <div data-role="collapsible" class="btn" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
+                    <h1>
+                        <img src="truth_or_dare.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> truth or dare</span>
+                    </h1>
+                    <a>Synopsis:</a><br />
+                    A harmless game of Truth or Dare among friends turns deadly when someone <br />-- or something -- begins to punish those who tell a lie or refuse the dare.<br />
+                    <br />
+                    <a>Directors:</a><br /> Jeff Wadlow<br />
+                    <a>Writers:</a><br />  Michael Reisz (story by), Michael Reisz (screenplay by)<br />
+                    <a>stars:</a><br />Lucy Hale, Tyler Posey, Violett Beane.<br />
+                    <a>Run Time:</a><br />103 minutes.
+                    <br />
+                    <br />
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/Cgnk3MLw9TM"></iframe>
+                    <button id="truth_or_dare" class="ui-btn ui-btn-b" style="width:20%; margin: auto;" onclick="wireEvents()">buy</button>
+                </div>
+            </div>
+
         </div>
-        <div data-role="footer"  data-theme="d" class="ui-btn ui-btn-b">
-            <h5>&copy; iMovie</h5>
+
+        <div data-role="footer" class="ui-btn ui-btn-b">
+
+            <h4>&copy; iMovie</h4>
+
         </div>
+
     </div>
 
 
+    <!-- manager !!!!!!! Movies Choices  -->
+    <div data-role="page" class="ui-btn-right" id="homeManager">
+
+        <div data-role="header" class="ui-btn ui-btn-b">
+
+            <a href="#homeManager" id="Homebtn" data-role="button" class="ui-btn-left" data-icon="home" data-iconpos="notext"></a>
+
+            <h1 id="managerHeader">iMovie</h1>
+
+            <a href="#home" data-role="button" onclick="logOut()">Logout</a>
+
+            <div data-role="navbar">
+
+                <ul>
+
+                    <li><a href="#Manger_insertMovie">Insert movie</a></li>
+
+                    <li><a href="#Maneger_insertScreening">Insert screening</a></li>
+
+
+
+                </ul>
+
+            </div>
+
+        </div>
+        <div data-role="content">
+
+            <center class="ui-btn ui-btn-b">
+
+                <img src="frojector.jpg" style="max-width:30%;max-height:15%;">
+
+                <h2>WELCOME TO OUR CINEMA.</h2>
+
+                <form class="ui-filterable">
+
+                    <input id="filterBasic-input" data-type="search">
+
+                </form>
+
+            </center>
+
+            <br>
+
+            <div data-role="listview" class="ui-btn ui-btn-b" data-filter="true" data-input="#filterBasic-input">
+                <div data-role="collapsible" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
+                    <h1>
+                        <img src="i_feel_pretty.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> i feel pretty</span>
+                    </h1>
+                    <a>Synopsis:</a><br />
+                    A woman struggling with insecurity wakes from a fall believing she is the most beautiful and capable woman on the planet.<br /> Her new confidence empowers her to live fearlessly,<br /> but what happens when she realizes her appearance never changed?<br />
+                    <a>Directors:</a><br /> Abby Kohn, Marc Silverstein<br />
+                    <a>Writers:</a><br />Abby Kohn, Marc Silverstein<br />
+                    <a>stars:</a><br />Amy Schumer, Michelle Williams, Emily Ratajkowski .<br />
+                    <a>Run Time:</a><br />110 minutes.
+
+                    <br />
+                    <br />
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/cVx9EFK3DWE"></iframe>
+                    <center> <a href="#delete-movie1" class="ui-btn ui-btn-b">delete</a></center>
+                </div>
+                <div data-role="collapsible" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
+                    <h1>
+                        <img src="jurassic_world.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> jurassic world </span>
+                    </h1>
+                    <a>Synopsis:</a><br />
+                    When the island's dormant volcano begins roaring to life,<br /> Owen and Claire mount a campaign to rescue the remaining dinosaurs from this extinction-level event.<br />
+                    <br />
+                    <a>Directors:</a><br /> J.A. Bayona<br />
+                    <a>Writers:</a><br /> Colin Trevorrow, Derek Connolly<br />
+                    <a>stars:</a><br />Bryce Dallas Howard, Chris Pratt, Jeff Goldblum.<br />
+                    <a>Run Time:</a><br />127 minutes.
+                    <br />
+                    <br />
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/vn9mMeWcgoM"></iframe>
+                    <center> <a href="#delete-movie2" class="ui-btn ui-btn-b">delete</a></center>
+                </div>
+                <div data-role="collapsible" class="btn" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
+                    <h1>
+                        <img src="truth_or_dare.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> truth or dare</span>
+                    </h1>
+                    <a>Synopsis:</a><br />
+                    A harmless game of Truth or Dare among friends turns deadly when someone <br />-- or something -- begins to punish those who tell a lie or refuse the dare.<br />
+                    <br />
+                    <a>Directors:</a><br /> Jeff Wadlow<br />
+                    <a>Writers:</a><br />  Michael Reisz (story by), Michael Reisz (screenplay by)<br />
+                    <a>stars:</a><br />Lucy Hale, Tyler Posey, Violett Beane.<br />
+                    <a>Run Time:</a><br />103 minutes.
+                    <br />
+                    <br />
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/Cgnk3MLw9TM"></iframe>
+                    <center> <a href="#delete-movie3" class="ui-btn ui-btn-b">delete</a></center>
+                </div>
+            </div>
+
+        </div>
+
+        <div data-role="footer" class="ui-btn ui-btn-b">
+
+            <h4>&copy; iMovie</h4>
+
+        </div>
+
+    </div>
+    <!--manger page - delete movie 1-->
+    <div data-role="page" class="ui-btn-right" id="delete-movie1">
+        <div data-role="header" class="ui-btn ui-btn-b">
+            <a href="#homeGeneral" id="Homebtn" data-role="button" class="ui-btn-left" data-icon="home" data-iconpos="notext"></a>
+            <h1>iMovie</h1>
+            <a href="#LoginPage" data-role="button">Login</a>
+        </div>
+        <div data-role="content">
+            <center class="ui-btn ui-btn-b">
+                <img src="frojector.jpg" style="max-width:30%;max-height:15%;">
+                <h2>WELCOME TO OUR CINEMA.</h2>
+                <form class="ui-filterable">
+                    <input id="filterBasic-input" data-type="search">
+                </form>
+            </center>
+            <br>
+            <div data-role="listview" class="ui-btn ui-btn-b" data-filter="true" data-input="#filterBasic-input">
+                <div data-role="collapsible" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
+                    <h1>
+                        <img src="jurassic_world.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> jurassic world </span>
+                    </h1>
+                    <a>Synopsis:</a><br />
+                    When the island's dormant volcano begins roaring to life,<br /> Owen and Claire mount a campaign to rescue the remaining dinosaurs from this extinction-level event.<br />
+                    <br />
+                    <a>Directors:</a><br /> J.A. Bayona<br />
+                    <a>Writers:</a><br /> Colin Trevorrow, Derek Connolly<br />
+                    <a>stars:</a><br />Bryce Dallas Howard, Chris Pratt, Jeff Goldblum.<br />
+                    <a>Run Time:</a><br />127 minutes.
+                    <br />
+                    <br />
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/vn9mMeWcgoM"></iframe>
+                    <center> <a href="#delete-movie2" class="ui-btn ui-btn-b">delete</a></center>
+                </div>
+                <div data-role="collapsible" class="btn" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
+                    <h1>
+                        <img src="truth_or_dare.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> truth or dare</span>
+                    </h1>
+                    <a>Synopsis:</a><br />
+                    A harmless game of Truth or Dare among friends turns deadly when someone <br />-- or something -- begins to punish those who tell a lie or refuse the dare.<br />
+                    <br />
+                    <a>Directors:</a><br /> Jeff Wadlow<br />
+                    <a>Writers:</a><br />  Michael Reisz (story by), Michael Reisz (screenplay by)<br />
+                    <a>stars:</a><br />Lucy Hale, Tyler Posey, Violett Beane.<br />
+                    <a>Run Time:</a><br />103 minutes.
+                    <br />
+                    <br />
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/Cgnk3MLw9TM"></iframe>
+                    <center> <a href="#delete-movie3" class="ui-btn ui-btn-b">delete</a></center>
+                </div>
+            </div>
+
+        </div>
+        <div data-role="footer" class="ui-btn ui-btn-b">
+            <h4>&copy; iMovie</h4>
+        </div>
+    </div>
+    <!--manger page - delete movie 2-->
+    <div data-role="page" class="ui-btn-right" id="delete-movie2">
+        <div data-role="header" class="ui-btn ui-btn-b">
+            <a href="#homeGeneral" id="Homebtn" data-role="button" class="ui-btn-left" data-icon="home" data-iconpos="notext"></a>
+            <h1>iMovie</h1>
+            <a href="#LoginPage" data-role="button">Login</a>
+        </div>
+        <div data-role="content">
+            <center class="ui-btn ui-btn-b">
+                <img src="frojector.jpg" style="max-width:30%;max-height:15%;">
+                <h2>WELCOME TO OUR CINEMA.</h2>
+                <form class="ui-filterable">
+                    <input id="filterBasic-input" data-type="search">
+                </form>
+            </center>
+            <br>
+            <div data-role="listview" class="ui-btn ui-btn-b" data-filter="true" data-input="#filterBasic-input">
+                <div data-role="collapsible" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
+                    <h1>
+                        <img src="i_feel_pretty.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> i feel pretty</span>
+                    </h1>
+                    <a>Synopsis:</a><br />
+                    A woman struggling with insecurity wakes from a fall believing she is the most beautiful and capable woman on the planet.<br /> Her new confidence empowers her to live fearlessly,<br /> but what happens when she realizes her appearance never changed?<br />
+                    <a>Directors:</a><br /> Abby Kohn, Marc Silverstein<br />
+                    <a>Writers:</a><br />Abby Kohn, Marc Silverstein<br />
+                    <a>stars:</a><br />Amy Schumer, Michelle Williams, Emily Ratajkowski .<br />
+                    <a>Run Time:</a><br />110 minutes.
+
+                    <br />
+                    <br />
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/cVx9EFK3DWE"></iframe>
+                    <center> <a href="#delete-movie1" class="ui-btn ui-btn-b">delete</a></center>
+                </div>
+                <div data-role="collapsible" class="btn" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
+                    <h1>
+                        <img src="truth_or_dare.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> truth or dare</span>
+                    </h1>
+                    <a>Synopsis:</a><br />
+                    A harmless game of Truth or Dare among friends turns deadly when someone <br />-- or something -- begins to punish those who tell a lie or refuse the dare.<br />
+                    <br />
+                    <a>Directors:</a><br /> Jeff Wadlow<br />
+                    <a>Writers:</a><br />  Michael Reisz (story by), Michael Reisz (screenplay by)<br />
+                    <a>stars:</a><br />Lucy Hale, Tyler Posey, Violett Beane.<br />
+                    <a>Run Time:</a><br />103 minutes.
+                    <br />
+                    <br />
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/Cgnk3MLw9TM"></iframe>
+                    <center> <a href="#delete-movie3" class="ui-btn ui-btn-b">delete</a></center>
+                </div>
+            </div>
+
+        </div>
+        <div data-role="footer" class="ui-btn ui-btn-b">
+            <h4>&copy; iMovie</h4>
+        </div>
+    </div>
+    <!--manger page - delete movie 3-->
+    <div data-role="page" class="ui-btn-right" id="delete-movie3">
+        <div data-role="header" class="ui-btn ui-btn-b">
+            <a href="#homeGeneral" id="Homebtn" data-role="button" class="ui-btn-left" data-icon="home" data-iconpos="notext"></a>
+            <h1>iMovie</h1>
+            <a href="#LoginPage" data-role="button">Login</a>
+        </div>
+        <div data-role="content">
+            <center class="ui-btn ui-btn-b">
+                <img src="frojector.jpg" style="max-width:30%;max-height:15%;">
+                <h2>WELCOME TO OUR CINEMA.</h2>
+                <form class="ui-filterable">
+                    <input id="filterBasic-input" data-type="search">
+                </form>
+            </center>
+            <br>
+            <div data-role="listview" class="ui-btn ui-btn-b" data-filter="true" data-input="#filterBasic-input">
+                <div data-role="collapsible" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
+                    <h1>
+                        <img src="i_feel_pretty.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> i feel pretty</span>
+                    </h1>
+                    <a>Synopsis:</a><br />
+                    A woman struggling with insecurity wakes from a fall believing she is the most beautiful and capable woman on the planet.<br /> Her new confidence empowers her to live fearlessly,<br /> but what happens when she realizes her appearance never changed?<br />
+                    <a>Directors:</a><br /> Abby Kohn, Marc Silverstein<br />
+                    <a>Writers:</a><br />Abby Kohn, Marc Silverstein<br />
+                    <a>stars:</a><br />Amy Schumer, Michelle Williams, Emily Ratajkowski .<br />
+                    <a>Run Time:</a><br />110 minutes.
+
+                    <br />
+                    <br />
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/cVx9EFK3DWE"></iframe>
+                    <center> <a href="#delete-movie1" class="ui-btn ui-btn-b">delete</a></center>
+                </div>
+                <div data-role="collapsible" data-iconpos="right" data-expanded-icon="carat-u" data-collapsed-icon="carat-d">
+                    <h1>
+                        <img src="jurassic_world.jpg" style="max-width:10%;max-height:10%;" /><span style="vertical-align: 17px;"> jurassic world </span>
+                    </h1>
+                    <a>Synopsis:</a><br />
+                    When the island's dormant volcano begins roaring to life,<br /> Owen and Claire mount a campaign to rescue the remaining dinosaurs from this extinction-level event.<br />
+                    <br />
+                    <a>Directors:</a><br /> J.A. Bayona<br />
+                    <a>Writers:</a><br /> Colin Trevorrow, Derek Connolly<br />
+                    <a>stars:</a><br />Bryce Dallas Howard, Chris Pratt, Jeff Goldblum.<br />
+                    <a>Run Time:</a><br />127 minutes.
+                    <br />
+                    <br />
+                    <iframe width="400" height="250" src="https://www.youtube.com/embed/vn9mMeWcgoM"></iframe>
+                    <center> <a href="#delete-movie2" class="ui-btn ui-btn-b">delete</a></center>
+                </div>
+            </div>
+
+        </div>
+        <div data-role="footer" class="ui-btn ui-btn-b">
+            <h4>&copy; iMovie</h4>
+        </div>
+    </div>
+    <!--client page  -  view orders-->
+    <div data-role="page" class="ui-btn-right" id="viewClientOrder">
+        <div data-role="header" class="ui-btn ui-btn-b">
+            <a href="#home" data-role="button" class="ui-btn-left" data-icon="home" data-iconpos="notext"></a>
+            <h1>iMovie</h1>
+            <a href="#LoginPage" data-role="button">Login</a>
+        </div>
+        <div data-role="content">
+            <br />
+            <p style="text-align:center"> there is :<label id="number"></label> orders.</p>
+            <br />
+            <table id="ordersDetails"></table>
+        </div>
+        <div data-role="footer" class="ui-btn ui-btn-b">
+            <h4>&copy; iMovie</h4>
+        </div>
+    </div>
+    <!-- manager page - insert screening-->
+    <div data-role="page" class="ui-btn-right" id="Maneger_insertScreening">
+        <div data-role="header" class="ui-btn ui-btn-b">
+            <a href="#homeManager" id="Homebtn" data-role="button" class="ui-btn-left" data-icon="home" data-iconpos="notext"></a>
+            <h1 id="managerHeader">iMovie</h1>
+            <a href="#LoginPage" data-role="button">Logout</a>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#Manger_insertMovie">insert movie</a></li>
+                    <li><a href="#Maneger_insertScreening">insert screening</a></li>
+                    <li><a href="#delete">delete movies</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <center>
+            <div>
+                insert screening
+            </div>
+        </center>
+        <center>
+            <div data-role="content">
+                <fieldset data-role="fieldcontain">
+                    <legend>screening details:</legend>
+                    <label for="slctMovieName">movie</label>
+                    <select id="slctMovieName"></select>
+                    <!--<input type="text" id="movieName" />-->
+                    <br />
+                    <label for="screenDate">date</label>
+                    <input type="date" id="screenDate" />
+                    <br />
+                    <label for="screenTime">time</label>
+                    <input type="time" id="screenTime" />
+                    <br />
+                    <label for="screenCinema">theater</label>
+                    <select id="screenCinema">
+                        <option selected value="null">select theater</option>
+                        <option value="Cinema City">Cinema City</option>
+                        <option value="Yes Planet">Yes Planet</option>
+                        <option value="Lev Cinema">Lev Cinema</option>
+                        <option value="Globs Max">Globus Max</option>
+                    </select>
+                    <br />
+                    <label for="screenType">type</label>
+                    <select id="screenType">
+                        <option selected value="null">select type</option>
+                        <option value="Regular">Regular</option>
+                        <option value="VIP">VIP</option>
+                        <option value="Late Night">Late Night</option>
+                    </select>
+                    <br />
+                    <button id="btnSaveScreen" style="width:20%; margin-left:35%;" onclick="insertScreen()">save</button>
+                </fieldset>
+            </div>
+        </center>
+        <div data-role="footer" class="ui-btn ui-btn-b">
+            <h4>&copy; iMovie</h4>
+        </div>
+    </div>
+    <!--manger page-->
+    <div data-role="page" id="Manger">
+        <div data-role="header">
+        </div>
+        <center>
+            <div data-role="content">
+                <fieldset data-role="fieldcontain" style="background-color:white">
+                    <legend>movie details:</legend>
+                    <label for="MovieName">movie name</label>
+                    <input type="text" id="MovieName" />
+                    <br />
+                    <label for="MovieSummray">movie summary</label>
+                    <input type="text" id="MovieSummray" />
+                    <br />
+                    <label for="MovieDirector">movie director</label>
+                    <input type="text" id="MovieDirector" />
+                    <br />
+                    <label for="MovieActors">movie actors</label>
+                    <input type="text" id="MovieActors" />
+                    <br />
+                    <label for="MovieLength">movie length</label>
+                    <input type="text" id="MovieLength" />
+                    <br />
+                    <label for="MovieGenre">movie genre</label>
+                    <input type="text" id="MovieGenre" />
+                    <br />
+                    <label for="MoviePremiereDate">movie premiere date</label>
+                    <input type="date" id="MoviePremiereDate" />
+                    <br />
+                    <label for="MovieRestirctedViewingAge">movie restricted viewing age</label>
+                    <input type="text" id="MovieRestirctedViewingAge" />
+                    <br />
+                    <label for="uploadpic">up load picture</label>
+                    <input type="file" id="uploadpic" />
+                    <br />
+                    <label for="uploadvid">up load trailer </label>
+                    <input type="file" id="uploadvid" />
+                    <br />
+                    <br />
+                    <button id="btnUpLoad" style="width:20%; margin-left:35%;">save</button>
+                </fieldset>
+            </div>
+        </center>
+        <div data-role="footer">
+            <h1> &copy; imovie</h1>
+        </div>
+    </div>
+    <!--the login page-->
+    <div data-role="page" id="LoginPage" data-theme="a">
+        <div data-role="header" class="ui-btn ui-btn-b">
+            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext"></a>
+            <h5>Welcome</h5>
+            <a href="#" data-rel="back" data-role="button" data-icon="back" data-iconpos="notext"></a>
+        </div>
+        <div data-role="content">
+            <br />
+            <fieldset data-role="fieldcontain" style="border: 1px solid black; padding: 20px;">
+                <legend>Please Login</legend>
+                <label for="LPName">Name:</label>
+                <input type="text" id="LPName" name="text" placeholder="Insert your name..." />
+                <label for="LPPassword">Password:</label>
+                <input type="text" id="LPPassword" name="number" placeholder="Insert your password..." />
+                <div style="text-align:center">
+                    <a href="#home" data-role="button" id="LoginBtn" data-mini="true" data-inline="true" data-icon="check" data-iconpos="bottom">Login</a><br />
+                </div>
+            </fieldset>
+            <div style="text-align:center">
+                <center>
+                    Don't have an account yet?-->
+                    <a href="#RegisterPage">click &nbsp;here</a>
+                </center>
+            </div>
+        </div>
+        <div data-role="footer" data-theme="d" class="ui-btn ui-btn-b">
+            <h5>&copy; iMovie</h5>
+        </div>
+    </div>
     <!-- Tickets Purchase -->
     <div data-role="page" id="buy">
-        <div data-role="header" data-position="fixed" class="ui-btn ui-btn-b">
+        <div data-role="header" class="ui-btn ui-btn-b">
             <a href="#home" data-role="button" data-icon="home" data-iconpos="notext"></a>
             <h1>iMovie</h1>
-            <a href="#" data-role="button" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+            <a href="#home" data-role="button" data-icon="back" data-iconpos="notext"></a>
         </div>
 
         <div data-role="content" onchange="pic()" style="text-align:center">
+            You Chose:
             <h2 id="movie" style="text-align:center"></h2>
-            <div id="pichere" >
-                <img id="poster" src="matrix.png" width="45%" height="40%">
+            <div id="pichere">
+                <img id="poster" src="matrix.png" style="height:45%; width:35%">
             </div>
             <div id="stamSP"></div>
         </div>
-        <div>
-            <center  class="ui-btn ui-btn-b">
-                <center>
+        <div data-role="footer" style="border-style:solid" class="ui-btn ui-btn-b">
+            <center>
+                <div> Tickets:</div>
+                <input type="number" id="numOftic" placeholder="insert number of tickets" value="Number of Tickets">
                 <b style="text-align:center"> Choose Cinema:</b>
                 <div data-role="fieldcontain" style="height:70%; width:70%;">
                     <select>
@@ -118,18 +639,9 @@
                         <option value="Globus Max">Globus Max</option>
                     </select>
                 </div>
-                    </center>
-            </center>
-        </div>
-
-
-        <div data-role="footer"  class="ui-btn ui-btn-b" style="border-style:solid">
-            <div> Tickets:</div>
-            <input type="number" id="numOftic" placeholder="insert number of tickets" value="Number of Tickets">
-            <div>
                 <center>
                     <b style="text-align:center"> Choose Ticket Type:</b>
-                    <div data-role="fieldcontain"  style="height:70%; width:70%;">
+                    <div data-role="fieldcontain" style="height:70%; width:70%;">
                         <select>
                             <option value="Cinema city">Normal</option>
                             <option value="Yes Planet">LateNight</option>
@@ -137,41 +649,41 @@
                         </select>
                     </div>
                 </center>
-            </div>
-            <div>Date:</div><input type="date" id="date">
-            <div>Hour:</div><input type="time" id="hour">
-            <form>
-                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-                    <input type="checkbox" name="pop" id="pop">
-                    <label for="pop" class="ui-btn ui-btn-b">Popcorn</label>
-                    <input type="checkbox" name="cola" id="cola">
-                    <label for="cola" class="ui-btn ui-btn-b">Coca-Cola</label>
-                    <input type="checkbox" name="snacks" id="snacks">
-                    <label for="snacks" class="ui-btn ui-btn-b">Snickers</label>
-                </fieldset>
-            </form>
-            <center> <a href="#Seats" class="ui-btn ui-btn-b" data-role="button" data-rel="next">Next</a></center>
+                <div>Date:</div><input type="date" id="date">
+                <div>Hour:</div><input type="time" id="hour">
 
+                <form>
+                    <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
 
+                        <input type="checkbox" name="pop" id="pop">
+                        <label for="pop">Popcorn</label>
+                        <input type="checkbox" name="cola" id="cola">
+                        <label for="cola">Coca-Cola</label>
+                        <input type="checkbox" name="snacks" id="snacks">
+                        <label for="snacks">Snickers</label>
+                    </fieldset>
+                </form>
+                <center class="ui-btn ui-btn-b"> <a href="#Seats" class="ui-btn ui-btn-b">order</a></center>
+            </center>
         </div>
 
-        <div data-role="footer"   class="ui-btn ui-btn-b" data-position="fixed">
+        <div data-role="footer" class="ui-btn ui-btn-b" data-position="fixed">
             <h4>&copy; iMovie</h4>
         </div>
 
     </div>
     <!--Choose Seats-->
     <div data-role="page" id="Seats">
-        <div data-role="header"  class="ui-btn ui-btn-b">
+        <div data-role="header" class="ui-btn ui-btn-b">
             <a href="#home" data-role="button" data-icon="home" data-iconpos="notext"></a>
             <h5>Please choose seats:</h5>
-            <a href="#" data-role="button" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+            <a href="#buy" data-role="button" data-icon="back" data-iconpos="notext"></a>
 
         </div>
         <center>
             <img src="cinema-chair.jpg" width="100%" height="10%" />
         </center>
-        <center  class="ui-btn ui-btn-b">
+        <center class="ui-btn ui-btn-b">
             <div data-role="content">
                 <div data-role="main" class="ui-content">
                     <table data-role="table" class="ui-responsive ui-shadow" id="myTable">
@@ -227,21 +739,22 @@
                         </tbody>
                     </table>
                 </div>
-                <center  class="ui-btn ui-btn-b"> <a href="#order" class="ui-btn ui-btn-b" data-role="button" data-rel="next">Next</a></center>
+                <center class="ui-btn ui-btn-b">
+                    <button id="order" class="ui-btn ui-btn-b" onclick="update()">Next</button>
+                </center>
             </div>
         </center>
-        <div data-role="footer"  class="ui-btn ui-btn-b">
+        <div data-role="footer" class="ui-btn ui-btn-b">
             <h5>&copy; iMovie</h5>
         </div>
     </div>
 
-
     <!--page 3-->
     <div data-role="page" id="order">
-        <div data-role="header"  class="ui-btn ui-btn-b">
+        <div data-role="header" class="ui-btn ui-btn-b">
             <a href="#home" data-role="button" data-icon="home" data-iconpos="notext"></a>
             <h1>Cinema</h1>
-            <a href="#" data-role="button" data-rel="back" data-icon="back" data-iconpos="notext"></a>
+            <a href="#" data-rel="back" data-role="button" data-icon="back" data-iconpos="notext"></a>
         </div>
         <div>
             <h3 style="text-align:center" class="ui-btn ui-btn-b">
@@ -260,54 +773,53 @@
                 <i id="price"></i>
             </h3>
         </div>
-        <center  class="ui-btn ui-btn-b">
+        <center class="ui-btn ui-btn-b">
             <center>
-            <div>
-                <b style="text-align:center"> Select Card Type:</b>
-                <div data-role="fieldcontain" style="height:70%; width:70%;">
-                    <select>
-                        <option value="Leumi Card">Leumi Card</option>
-                        <option value="American Express">American Express</option>
-                        <option value="Master Card">Master Card</option>
-                    </select>
-                </div>
-                <b style="text-align:center"> Credit Card Number:</b>
-                <input id="numOftic" type="number" placeholder="insert Credit Card Number" value="Credit Card Number">
-                <b style="text-align:center"> Credit Card validity:</b>
-                <input id="validityOftic" type="number" placeholder="insert Credit Card validity" value="Credit Card validity">
                 <div>
-                    <center  class="ui-btn ui-btn-b">
-                        <b style="text-align:center">Type Of Citizen:</b>
-                        <div data-role="fieldcontain" style="height:70%; width:70%;">
-                            <select>
-                                <option value="Cinema city">אזרח רגיל </option>
-                                <option value="Yes Planet">אזרח וותיק</option>
-                                <option value="Lev Cinema">חייל</option>
-                                <option value="Lev Cinema">נכה</option>
-                            </select>
-                        </div>
-                    </center>
+                    <b style="text-align:center"> Select Card Type:</b>
+                    <div data-role="fieldcontain" style="height:70%; width:70%;">
+                        <select>
+                            <option value="Leumi Card">Leumi Card</option>
+                            <option value="American Express">American Express</option>
+                            <option value="Master Card">Master Card</option>
+                        </select>
+                    </div>
+                    <b style="text-align:center"> Credit Card Number:</b>
+                    <input id="numOftic" type="number" placeholder="insert Credit Card Number" value="Credit Card Number">
+                    <b style="text-align:center"> Credit Card validity:</b>
+                    <input id="validityOftic" type="number" placeholder="insert Credit Card validity" value="Credit Card validity">
+                    <div>
+                        <center class="ui-btn ui-btn-b">
+                            <b style="text-align:center">Type Of Citizen:</b>
+                            <div data-role="fieldcontain" style="height:70%; width:70%;">
+                                <select>
+                                    <option value="Cinema city">אזרח רגיל </option>
+                                    <option value="Yes Planet">אזרח וותיק</option>
+                                    <option value="Lev Cinema">חייל</option>
+                                    <option value="Lev Cinema">נכה</option>
+                                </select>
+                            </div>
+                        </center>
+                    </div>
+                    <b style="text-align:center"> id:</b>
+                    <input id="id" type="number" placeholder="insert your id" value="id">
+                    <b style="text-align:center"> Coupon?</b>
+                    <fieldset data-role="fieldcontain">
+                        <select data-role="slider">
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </fieldset>
+                    <a href="#dia" data-role="button" class="ui-btn ui-btn-b" data-rel="dialog">Save Order</a>
                 </div>
-                <b style="text-align:center"> id:</b>
-                <input id="id" type="number" placeholder="insert your id" value="id">
-                <b style="text-align:center"> Coupon?</b>
-                <fieldset data-role="fieldcontain">
-                    <select data-role="slider">
-                        <option>Yes</option>
-                        <option>No</option>
-                    </select>
-                </fieldset>
-                <a href="#dia" data-role="button" class="ui-btn ui-btn-b" data-rel="dialog">Save Order</a>
-            </div>
-                </center>
+            </center>
         </center>
-        <div data-role="footer"   class="ui-btn ui-btn-b" data-position="fixed">
+        <div data-role="footer" class="ui-btn ui-btn-b" data-position="fixed">
             <h4>&copy; iMovie</h4>
         </div>
     </div>
-
-    <div id=dia data-role="dialog" >
-        <center  class="ui-btn ui-btn-b">
+    <div id=dia data-role="dialog">
+        <center class="ui-btn ui-btn-b">
             <div data-role="header" class="ui-btn ui-btn-b"><h1>Cinema</h1></div>
             Your Order Is Completed!
             <div data-role="footer" class="ui-btn ui-btn-b">
@@ -315,5 +827,93 @@
             </div>
         </center>
     </div>
+    <!--Resistration Page-->
+    <div data-role="page" id="RegisterPage" data-theme="a">
+        <div data-role="header" class="ui-btn ui-btn-b">
+            <a href="#home" data-role="button" data-icon="home" data-iconpos="notext"></a>
+            <h5>Register</h5>
+            <a href="#" data-rel="back" data-role="button" data-icon="back" data-iconpos="notext"></a>
+        </div>
+        <div data-role="content">
+            <br /><br />
+            <fieldset data-role="fieldcontain" style="border: 1px solid black; padding: 50px;">
+                <legend>Please Enter details</legend>
+                <label for="RName">Name:</label>
+                <input type="text" id="RName" name="text" placeholder="insert your name..." /><br />
+                <label for="RPassword">Password: </label>
+                <input type="text" id="RPassword" name="number" placeholder="insert your password..." /><br />
+                <label for="CRPassword">Password: </label>
+                <input type="text" id="CRPassword" name="number" placeholder="Confirm password..." /><br />
+                <div style="text-align:center">
+                    <a href="#home" data-role="button" id="RegisterBtn" data-mini="true" data-inline="true" data-icon="check" data-iconpos="bottom">Login</a>
+                </div>
+            </fieldset>
+        </div>
+        <div data-role="footer" data-theme="d" class="ui-btn ui-btn-b">
+            <h5>&copy; iMovie</h5>
+        </div>
+    </div>
+    <!--manger page - insert movie-->
+    <div data-role="page" id="Manger_insertMovie">
+        <center>
+            <div data-role="header" class="ui-btn ui-btn-b">
+                <a href="#homeManager" id="Homebtn" data-role="button" class="ui-btn-left" data-icon="home" data-iconpos="notext"></a>
+                <h1 id="managerHeader">iMovie</h1>
+                <a href="#LoginPage" data-role="button">Logout</a>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#Manger_insertMovie">insert movie</a></li>
+                        <li><a href="#Maneger_insertScreening">insert screening</a></li>
+                        <li><a href="#delete">delete movies</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </center>
+        <center>
+            <div data-role="content">
+                <fieldset data-role="fieldcontain" style="background-color:white">
+                    <legend>movie details:</legend>
+                    <label for="MovieName">movie name</label>
+                    <input type="text" id="MovieName" />
+                    <br />
+                    <label for="MovieSummray">movie summary</label>
+                    <input type="text" id="MovieSummray" />
+                    <br />
+                    <label for="MovieActors">movie actors</label>
+                    <input type="text" id="MovieActors" />
+                    <br />
+                    <label for="MovieDirector">movie actors</label>
+                    <input type="text" id="MovieDirector" />
+                    <br />
+                    <label for="MovieLength">movie length</label>
+                    <input type="text" id="MovieLength" />
+                    <br />
+                    <label for="MovieGenre">movie genre</label>
+                    <input type="text" id="MovieGenre" />
+                    <br />
+                    <label for="MoviePremiereDate">movie premiere date</label>
+                    <input type="date" id="MoviePremiereDate" />
+                    <br />
+                    <label for="MovieRestirctedViewingAge">movie restricted viewing age</label>
+                    <input type="text" id="MovieRestirctedViewingAge" />
+                    <br />
+                    <label for="uploadpic">up load picture</label>
+                    <input type="file" id="uploadpic" />
+                    <br />
+                    <label for="uploadvid">up load trailer </label>
+                    <input type="file" id="uploadvid" />
+                    <br />
+                    <br />
+                    <button id="btnSaveMovie" style="width:20%; margin-left:35%;" onclick="insertMovie()">save</button>
+                </fieldset>
+            </div>
+        </center>
+        <div data-role="footer">
+            <h1> &copy; imovie</h1>
+        </div>
+    </div>
+
 </body>
 </html>
+
